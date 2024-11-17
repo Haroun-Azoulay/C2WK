@@ -1,0 +1,55 @@
+<html><head><title>Paper Exam</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">Paper Exam</div><div class="panel-heading panel-module">Modalités</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Correction</td>
+<td>Soutenance</td>
+</tr>
+<tr>
+<td>Durée</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>Effectif</td>
+<td>Seul</td>
+</tr>
+</tbody></table>
+</div><div class="panel-heading panel-project">Consignes</div><div class="panel-body"><p>You are tasked with creating a number guessing game in TypeScript. The program generates a random number between 1 and 100. The user needs to guess the number, and the program provides feedback on whether the guess is too high, too low, or correct. The game keeps track of the user's attempts and displays the total number of tries when the user wins.</p>
+<div class="panel-heading undefined">Step 1</div><div class="panel-body"><ul>
+<li>Generate a random integer between 1 and 100  </li>
+</ul>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">Math.floor(Math.random() * 100 + 1);</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div><div class="panel-heading undefined">Step 2</div><div class="panel-body"><ul>
+<li>Use readline to use pompt</li>
+</ul>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>Example :</p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">rl.question('What is your age? ', (age) =&gt; {
+    console.log('Your age is: ' + age);
+});</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div><div class="panel-heading undefined">Step 3</div><div class="panel-body"><ul>
+<li>Check if the user’s input is a valid number.</li>
+<li>If the input is not a valid number prompt the user to enter a valid number.</li>
+</ul>
+</div><div class="panel-heading undefined">Step 4</div><div class="panel-body"><ul>
+<li>Compare the user's guess with the generated number and provide feedback:</li>
+</ul>
+<p>If the guess is too low, display: "Too low, try again!"<br>If the guess is too high, display: "Too high, try again!"<br>If the guess is correct, display: "You win!"</p>
+</div><div class="panel-heading undefined">Step 5</div><div class="panel-body"><ul>
+<li>Keep a record of the number of attempts the user has made.</li>
+<li>When the user guesses the correct number, display the total number of attempts.</li>
+</ul>
+<p>You must add number of attempts on array</p>
+</div><div class="panel-heading undefined">Step 6</div><div class="panel-body"><ul>
+<li>After the user wins, terminate the program gracefully.</li>
+</ul>
+</div></div><div class="panel-heading panel-forbidden">Forbiden</div><div class="panel-body"><ul>
+<li>You don't use your computer !</li>
+</ul>
+</div></body></html>
