@@ -1,0 +1,81 @@
+<html><head><title>Books</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">Books</div><div class="panel-heading panel-module">Modalities</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deposit</td>
+<td>$$RENDERED$$</td>
+</tr>
+<tr>
+<td>Folder</td>
+<td>folder/</td>
+</tr>
+<tr>
+<td>Required file</td>
+<td>books.json</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Exam</td>
+</tr>
+<tr>
+<td>Days</td>
+<td>2 Days</td>
+</tr>
+<tr>
+<td>Effective</td>
+<td>Alone</td>
+</tr>
+</tbody></table>
+</div><div class="panel-heading panel-project">Instructions</div><div class="panel-body"><p>You are tasked with creating a number guessing game in TypeScript. The program generates a random number between 1 and 100. The user needs to guess the number, and the program provides feedback on whether the guess is too high, too low, or correct. The game keeps track of the user's attempts and displays the total number of tries when the user wins.</p>
+<div class="panel-heading undefined">Step 1</div><div class="panel-body"><ul>
+<li>Load data from an existing JSON file <code>(authors.json)</code>.</li>
+<li>Check if the file exists before attempting to read it (if the file is missing or corrupted, display an appropriate error message).</li>
+</ul>
+</div><div class="panel-heading undefined">Step 2</div><div class="panel-body"><ul>
+<li>Display a menu with the following options:</li>
+</ul>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">1. Display all authors
+2. Search an author by name
+3. Display works by genre
+4. Add a new author
+5. Calculate the average age of deceased authors
+6. Save and exit
+7. Exit without saving</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><ul>
+<li>Add an option to exit the program without saving (7. Exit without saving).</li>
+<li>The menu should reappear after each action (except when the user chooses to exit).</li>
+</ul>
+</div><div class="panel-heading undefined">Step 3 - 1</div><div class="panel-body"><ul>
+<li>Display a list of authors' names along with their id.</li>
+<li>Add pagination if the list contains more than 10 authors.</li>
+</ul>
+<div class="panel-heading undefined">Step 3 - 2</div><div class="panel-body"><ul>
+<li>Allow the user to enter a full name or keyword</li>
+<li>Display all the information (works, genres, dates, etc.) for authors matching the keyword.</li>
+<li>Make the search case-insensitive.</li>
+</ul>
+</div><div class="panel-heading undefined">Step 3 - 3</div><div class="panel-body"><ul>
+<li>Ask the user to enter a genre </li>
+<li>Display a list of works matching that genre along with the associated author's name.</li>
+<li>if no results are found, display an appropriate message..</li>
+</ul>
+</div><div class="panel-heading undefined">Step 3 - 4</div><div class="panel-body"><ul>
+<li>Prompt the user for the following details:</li>
+<li>id: Automatically generate a unique number (max(id) + 1).</li>
+<li>name: The author's name (required).<br>works: A list of works (accept comma-separated input and convert it into an array).</li>
+<li>genres: A list of genres (similar to works).<br>birthYear: The year of birth (validate it as a number).</li>
+<li>deathYear: The year of death (optional, validate that it is greater than birthYear</li>
+<li>Add the new author to the main array.</li>
+</ul>
+</div><div class="panel-heading undefined">Step 3 - 5</div><div class="panel-body"><ul>
+<li>Use JSON.stringify to convert the updated data back into a JSON string.</li>
+<li>Save the updated data to the file (authors.json), overwriting the old content.</li>
+<li>Display a confirmation message upon successful save.</li>
+</ul>
+</div><div class="panel-heading undefined">Step 3 - 6</div><div class="panel-body"><ul>
+<li>Add an option that allows the user to quit the program without modifying the JSON file.</li>
+</ul>
+</div></div></div></body></html>

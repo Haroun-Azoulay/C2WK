@@ -1,12 +1,12 @@
 # [header] Paper Exam
 
-# [module] Modalités
+# [module] Modalities
 
 | Type | Description |
 | - | - |
-| Correction | Soutenance |
-| Durée | 1 h |
-| Effectif | Seul |
+| Correction | Exam |
+| Duration | 1 h |
+| Effective | Alone |
 
 # [project] Consignes
 You are tasked with creating a number guessing game in TypeScript. The program generates a random number between 1 and 100. The user needs to guess the number, and the program provides feedback on whether the guess is too high, too low, or correct. The game keeps track of the user's attempts and displays the total number of tries when the user wins.
