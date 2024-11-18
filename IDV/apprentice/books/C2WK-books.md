@@ -6,16 +6,16 @@
 | - | - |
 | Deposit | $$RENDERED$$ |
 | Folder | folder/ |
-| Required file | books.json |
+| Required file | books.csv |
 | Correction | Exam |
 | Days | 2 Days |
 | Effective | Alone |
 
 # [project] Instructions
-You are tasked with creating a number guessing game in TypeScript. The program generates a random number between 1 and 100. The user needs to guess the number, and the program provides feedback on whether the guess is too high, too low, or correct. The game keeps track of the user's attempts and displays the total number of tries when the user wins.
+You must realize all steps. Good luck !
 
 ## [exercice] Step 1
-- Load data from an existing JSON file ```(authors.json)```.
+- Load data from an existing CSV file ```(book.csv)```.
 -Check if the file exists before attempting to read it (if the file is missing or corrupted, display an appropriate error message).
 
 ## [exercice] Step 2
@@ -57,15 +57,14 @@ You are tasked with creating a number guessing game in TypeScript. The program g
 works: A list of works (accept comma-separated input and convert it into an array).
 - genres: A list of genres (similar to works).
 birthYear: The year of birth (validate it as a number).
-- deathYear: The year of death (optional, validate that it is greater than birthYear
+- deathYear: The year of death (optional, validate that it is greater than birthYear)
 - Add the new author to the main array.
 
 
 ### [exercice] Step 3 - 5
 
-- Use JSON.stringify to convert the updated data back into a JSON string.
-- Save the updated data to the file (authors.json), overwriting the old content.
+- Save the updated data to the file (books.csv), overwriting the old content.
 - Display a confirmation message upon successful save.
 
 ### [exercice] Step 3 - 6
-- Add an option that allows the user to quit the program without modifying the JSON file.
+- Add an option that allows the user to quit the program without modifying the CSV file.

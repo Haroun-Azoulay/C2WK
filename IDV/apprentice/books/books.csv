@@ -1,0 +1,11 @@
+id,name,realName,works,genres,birthYear,deathYear
+1,Yasmina Khadra,Mohammed Moulessehoul,"['The Attack', 'The Swallows of Kabul', 'What the Day Owes the Night']","['Novel', 'Fiction', 'Drama']",1955,
+2,Kateb Yacine,,"['Nedjma', 'The Star-Polygon', 'Mohamed, Pack Your Suitcase']","['Novel', 'Playwriting', 'Poetry']",1929,1989.0
+3,Assia Djebar,Fatima-Zohra Imalayen,"['Fantasia: An Algerian Cavalcade', 'Women of Algiers in Their Apartment', 'So Vast the Prison']","['Novel', 'History', 'Feminism']",1936,2015.0
+4,Rachid Boudjedra,,"['The Repudiation', 'The Obstinate Snail', 'The Chaos of Things']","['Novel', 'Essay', 'Poetry']",1941,
+5,Mouloud Mammeri,,"['The Forgotten Hill', 'The Opium and the Stick', 'The Sleep of the Just']","['Novel', 'Poetry', 'Ethnography']",1917,1989.0
+6,Mouloud Feraoun,,"[""The Poor Man's Son"", 'Earth and Blood', 'The Paths That Ascend']","['Novel', 'Autobiography']",1913,1962.0
+7,Malek Haddad,,"['I Will Offer You a Gazelle', 'The Flower Quay No Longer Responds', 'The Last Impression']","['Novel', 'Poetry']",1927,1978.0
+8,Boualem Sansal,,"[""The Barbarians' Oath"", '2084: The End of the World', 'Harraga']","['Novel', 'Essay', 'Dystopian Fiction']",1949,
+9,Mohammed Dib,,"['The Big House', 'The Fire', 'The Loom']","['Novel', 'Poetry', 'Short Story']",1920,2003.0
+10,Tahar Djaout,,"['The Bone Seekers', 'The Invention of the Desert', 'The Last Summer of Reason']","['Novel', 'Poetry', 'Journalism']",1954,1993.0

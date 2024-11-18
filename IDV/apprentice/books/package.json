@@ -1,12 +1,12 @@
 {
     "dependencies": {
-      "@types/readline-sync": "^1.4.8"
+        "@types/readline-sync": "^1.4.8",
+        "csv-parse": "^5.5.6"
     },
     "scripts": {
-      "dev": "tsc index.ts && node index.js"
+        "dev": "tsc index.ts && node index.js"
     },
     "devDependencies": {
-      "@types/node": "^22.9.0"
+        "@types/node": "^22.9.0"
     }
-  }
-  
+}

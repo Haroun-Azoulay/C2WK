@@ -12,13 +12,13 @@
 You are tasked with creating a number guessing game in TypeScript. The program generates a random number between 1 and 100. The user needs to guess the number, and the program provides feedback on whether the guess is too high, too low, or correct. The game keeps track of the user's attempts and displays the total number of tries when the user wins.
 
 ## [exercice] Step 1
-- Generate a random integer between 1 and 100  
+- Generate a random integer between 1 and 100 on a function generateRandomNumber.
 
 ```
 Math.floor(Math.random() * 100 + 1);
 ```
 ## [exercice] Step 2
-- Use readline to use pompt
+- Use readline to use pompt on a function askQuestion.
 
 ```
 const readline = require("readline");
