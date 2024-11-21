@@ -1,0 +1,163 @@
+<html><head><title>My first DB !</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">My first DB !</div><div class="panel-heading panel-module">Modalities</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dépôt</td>
+<td>$$Rendu$$</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Exam</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Two day</td>
+</tr>
+<tr>
+<td>Effective</td>
+<td>Alone</td>
+</tr>
+</tbody></table>
+</div><div class="panel-heading panel-project">instructions</div><div class="panel-body"><div class="panel-heading undefined">Step 1</div><div class="panel-body"><p><strong>The cinema is called Etna-movie and it is open near you and wants to manage its film, its rooms and its stages.</strong></p>
+<p>You must create UML. You want to see step 2 to look informations </p>
+</div><div class="panel-heading panel-info">Documentation</div><div class="panel-body"><p><a target="_blank" href="https://sparxsystems.com/resources/tutorials/uml/datamodel.html" title="null">Uml Documentation</a></p>
+</div><div class="panel-heading undefined">Step 2</div><div class="panel-body"><p>The company provides this information: </p>
+<p><strong>Films :</strong></p>
+<table>
+<thead>
+<tr>
+<th>column name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>Unique identifier for the film</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Title of the film</td>
+</tr>
+<tr>
+<td>genre</td>
+<td>Genre of the film (e.g., Action, Drama)</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Duration of the film (HH:MM:SS)</td>
+</tr>
+<tr>
+<td>director</td>
+<td>Name of the director</td>
+</tr>
+<tr>
+<td>release date</td>
+<td>Release date of the film</td>
+</tr>
+</tbody></table>
+<p><strong>Rooms :</strong></p>
+<table>
+<thead>
+<tr>
+<th>column name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>Unique identifier for the room</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Room number</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>Maximum capacity of the room</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Type of the room (normal, IMAX, 3D)</td>
+</tr>
+</tbody></table>
+<p><strong>Screenings :</strong></p>
+<table>
+<thead>
+<tr>
+<th>column name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>Unique identifier for the screening</td>
+</tr>
+<tr>
+<td>film_id</td>
+<td>Reference to the film (Films)</td>
+</tr>
+<tr>
+<td>room_id</td>
+<td>Reference to the room (Rooms)</td>
+</tr>
+<tr>
+<td>times</td>
+<td>Time of the screening</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Date of the screening</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Ticket price</td>
+</tr>
+</tbody></table>
+<p><strong>Reservations :</strong></p>
+<table>
+<thead>
+<tr>
+<th>column name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>Unique identifier for the reservation</td>
+</tr>
+<tr>
+<td>client</td>
+<td>Name of the client</td>
+</tr>
+<tr>
+<td>session</td>
+<td>Reference to the screening (Screenings)</td>
+</tr>
+<tr>
+<td>number of places</td>
+<td>Number of reserved seats</td>
+</tr>
+<tr>
+<td>price paid</td>
+<td>Total price paid</td>
+</tr>
+</tbody></table>
+<p>With the information provided, create an SQL script to generate the different tables with the specified fields.</p>
+<p><strong>Relationships:</strong></p>
+<ul>
+<li>Films and Screenings: A film can have multiple screenings (1:N relationship).</li>
+<li>Rooms and Screenings: A room can be used for multiple screenings (1:N relationship).</li>
+<li>Screenings and Reservations: A screening can have multiple reservations (1:N relationship).</li>
+</ul>
+<p><strong>Primary and Foreign Keys:</strong></p>
+<ul>
+<li><strong><em>film_id</em></strong> is a foreign key in Screenings referenced from Films.</li>
+<li><strong><em>room_id</em></strong> is a foreign key in Screenings referenced from Rooms.</li>
+<li><strong><em>screening_id</em></strong> is a foreign key in Reservations referenced from Screenings.</li>
+</ul>
+</div><div class="panel-heading panel-info">Documentation</div><div class="panel-body"><p><a target="_blank" href="https://www.w3schools.com/sql/" title="null">SQL documentation</a></p>
+</div></div></body></html>

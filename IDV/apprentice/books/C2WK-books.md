@@ -4,7 +4,7 @@
 
 | Type | Description |
 | - | - |
-| Deposit | $$RENDERED$$ |
+| Deposit | $$RENDU$$ |
 | Folder | folder/ |
 | Required file | books.csv |
 | Correction | Exam |

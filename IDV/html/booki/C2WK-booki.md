@@ -4,10 +4,9 @@
 
 | Type | Description |
 | - | - |
-| Folder - HTML | booki/ |
-| Folder - CSS  | style/ |
-| exam | orals |
-| Duration | 2 days |
+| Dépôt | $$Rendu$$ |
+| exam | Exam |
+| Duration | 2 Days |
 | Participants | Individual |
 
 

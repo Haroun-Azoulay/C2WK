@@ -1,0 +1,201 @@
+<html><head><title>Etna-trip</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">Etna-trip</div><div class="panel-heading panel-module">Modalities</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dépôt</td>
+<td>$$RENDU$$</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Exam</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>1 Week</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>Only</td>
+</tr>
+</tbody></table>
+</div><div class="panel-heading panel-objective">Goals</div><div class="panel-body"><p>The Etna school partners with a travel agency and offers low-cost trips to its students! But the director asks you to create an efficient API to call the front end so he asks you!<br>Good luck!</p>
+<p>Develop a RESTful API for a travel management platform using TypeScript, Express.js, MySQL, and Sequelize. The platform will allow users to:</p>
+<ul>
+<li>User account management (registration, login, updates, and deletion). <strong>You have two roles User or Admin.</strong></li>
+<li>Profile creation and management.</li>
+<li>Viewing and managing trips.</li>
+<li>Adding trips to a shopping cart and managing its contents.<br>In this project, Zod will be used to validate API request payloads to ensure data correctness before processing.</li>
+</ul>
+</div><div class="panel-heading panel-project">Instructions</div><div class="panel-body"><div class="panel-heading undefined">Step 1: Setup the Project</div><div class="panel-body"><ul>
+<li>Node.js: <a target="_blank" href="https://nodejs.org/" title="undefined">https://nodejs.org/</a></li>
+<li>Express: <a target="_blank" href="https://expressjs.com/" title="undefined">https://expressjs.com/</a></li>
+<li>TypeScript: <a target="_blank" href="https://www.typescriptlang.org/docs/handbook/-" title="undefined">https://www.typescriptlang.org/docs/handbook/-</a> - typescript-in-5-minutes.html</li>
+<li>Sequelize: <a target="_blank" href="https://sequelize.org/" title="undefined">https://sequelize.org/</a></li>
+</ul>
+</div><div class="panel-heading undefined">Step 2: Define the Database Schema with ORM with Seequelize</div><div class="panel-body"><p><a target="_blank" href="https://drawsql.app/teams/haroun/diagrams/etna-trip" title="null">Database Schema</a></p>
+</div><div class="panel-heading panel-forbidden">Don't forget cardinality</div><div class="panel-heading undefined">Step 3: Create SQL script to insert data on DB</div><div class="panel-body"><p>After that, i can write this command on your terminal i can see this for example : </p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">$ SELECT * FROM trip WHERE id = 1;
+
+{
+ "trip_id": 1,
+ "destination": "Paris",
+ "description": "A wonderful 5-day trip to explore the historical sites and cuisine of Paris.",
+ "price": 1200.50,
+ "availability": true,
+ "start_date": "2024-12-15",
+ "end_date": "2024-12-20",
+ "create_date": "2024-11-01",
+ "update_date": "2024-11-15"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div><div class="panel-heading undefined">Step 4: Add Zod for Request Validation</div><div class="panel-body"><ul>
+<li>Zod: <a target="_blank" href="https://zod.dev/" title="undefined">https://zod.dev/</a></li>
+</ul>
+<p>Zod is a TypeScript-first schema declaration and validation library. I'm using the term "schema" to broadly refer to any data type, from a simple string to a complex nested object. Zod is designed to be as developer-friendly as possible. The goal is to eliminate duplicative type declarations.</p>
+</div><div class="panel-heading undefined">Step 5: Create API Endpoints</div><div class="panel-body"><p><strong>I want all to call the API for trips table like this:</strong> </p>
+<p>POST /api/trips</p>
+<p><strong>Request Body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "destination": "Paris",
+ "description": "A wonderful 5-day trip to explore the historical sites and cuisine of Paris.",
+ "price": 1200.50,
+ "availability": true,
+ "start_date": "2024-12-15",
+ "end_date": "2024-12-20"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "trip_id": 1,
+ "destination": "Paris",
+ "description": "A wonderful 5-day trip to explore the historical sites and cuisine of Paris.",
+ "price": 1200.50,
+ "availability": true,
+ "start_date": "2024-12-15",
+ "end_date": "2024-12-20",
+ "create_date": "2024-11-21",
+ "update_date": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>GET /api/trips</p>
+<p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">[
+ {
+   "trip_id": 1,
+   "destination": "Paris",
+   "description": "A wonderful 5-day trip to explore the historical sites and cuisine of Paris.",
+   "price": 1200.50,
+   "availability": true,
+   "start_date": "2024-12-15",
+   "end_date": "2024-12-20",
+   "create_date": "2024-11-21",
+   "update_date": "2024-11-21"
+ },
+ {
+   "trip_id": 2,
+   "destination": "Tokyo",
+   "description": "A cultural journey into the heart of Japan.",
+   "price": 3000.00,
+   "availability": true,
+   "start_date": "2025-01-10",
+   "end_date": "2025-01-20",
+   "create_date": "2024-11-21",
+   "update_date": "2024-11-21"
+ }
+]</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>GET /api/trips/:id</p>
+<p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+  "trip_id": 1,
+  "destination": "Paris",
+  "description": "A wonderful 5-day trip to explore the historical sites and cuisine of Paris.",
+  "price": 1200.50,
+  "availability": true,
+  "start_date": "2024-12-15",
+  "end_date": "2024-12-20",
+  "create_date": "2024-11-21",
+  "update_date": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>PUT /api/trips/:id</p>
+<p><strong>Request Body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "destination": "Paris Updated",
+ "description": "An updated description for this trip.",
+ "price": 1300.00,
+ "availability": false,
+ "start_date": "2024-12-15",
+ "end_date": "2024-12-20"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "trip_id": 1,
+ "destination": "Paris Updated",
+ "description": "An updated description for this trip.",
+ "price": 1300.00,
+ "availability": false,
+ "start_date": "2024-12-15",
+ "end_date": "2024-12-20",
+ "create_date": "2024-11-21",
+ "update_date": "2024-11-22"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>DELETE /api/trips/:id</p>
+<p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">204 No Content</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div><div class="panel-heading undefined">Step 6:Create JWT &amp; add Middleware for Validation</div><div class="panel-body"><ul>
+<li>You need to create a JWT token to register and temporarily save JWT to your browser's local storage.</li>
+</ul>
+<p>I want see this =&gt; Example you create User :</p>
+<p>POST /api/users/signup</p>
+<p><strong>Request body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "username": "john_doe",
+ "password": "password123",
+ "is_admin": false,
+ "email": "john.doe@gmail.com",
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response (success):</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "user_id": 1,
+ "username": "john_doe",
+ "is_admin": false,
+ "email": "john.doe@gmail.com",
+ "create_date": "2024-01-01",
+ "update_date": "2024-01-01"
+"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2Vybm
+FtZSI6ImpvaG5fZG9lIiwiaXNfYWRtaW4iOmZhbHNlLCJpYXQiOjE2ODAwMDAwMDB9.abcdef1234567890";
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>And you connect :</strong> </p>
+<p>POST /api/users/signin</p>
+<p>Authorization Header: When accessing protected routes, the client must include the token _in the header:</p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">Authorization: Bearer <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>token</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Request body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "username": "john_doe",
+ "password": "password123"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImpvaG5fZG9
+lIiwiaXNfYWRtaW4iOmZhbHNlLCJpYXQiOjE2ODAwMDAwMDB9.abcdef1234567890",
+ "user_id": 1,
+ "username": "john_doe",
+ "is_admin": false
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>You create the rest of the tables and after using the Middleware, continue (JWT is your best friend)</p>
+<p>Examples:</p>
+<p>User with user_id = 1 can only access profil_id = 1.<br>To create an entry in Cards_trips (selling/reserving a trip), the token must be valid, confirming the user's identity.</p>
+</div><div class="panel-heading undefined">Step 7: The Admin mode</div><div class="panel-body"><p>Now the admin wants to create trips to sell, for example, so you also want to use middleware, you know? </p>
+<p>Before Whats is the admin role ? </p>
+<p>The admin role is essential for managing the trip platform efficiently. Admins have exclusive privileges that regular users don’t, such as creating, updating, and deleting trips. Middleware will be implemented to ensure these actions are restricted to admin users only.</p>
+<p>example :</p>
+<p>POST /api/trips/ad (Admin Only)</p>
+<p>Authorization Header: When accessing protected routes, the client must include the token _in the header:</p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">Authorization: Bearer <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>token</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Request body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "destination": "Rome",
+ "description": "Explore the ancient wonders of Rome in this 7-day trip.",
+ "price": 1800.00,
+ "availability": true,
+ "start_date": "2025-02-01",
+ "end_date": "2025-02-07"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "trip_id": 3,
+ "destination": "Rome",
+ "description": "Explore the ancient wonders of Rome in this 7-day trip.",
+ "price": 1800.00,
+ "availability": true,
+ "start_date": "2025-02-01",
+ "end_date": "2025-02-07",
+ "create_date": "2024-11-21",
+ "update_date": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>Let's go!</p>
+</div></div></body></html>
