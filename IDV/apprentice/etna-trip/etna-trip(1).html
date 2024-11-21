@@ -1,0 +1,90 @@
+<html><head><title>Etna-trip</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">Etna-trip</div><div class="panel-heading panel-module">Modalities</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dépôt</td>
+<td>$$RENDU$$</td>
+</tr>
+<tr>
+<td>Dossier</td>
+<td>dossier/</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Exam</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>4 week</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>Only</td>
+</tr>
+</tbody></table>
+</div><div class="panel-heading panel-objective">Objectifs</div><div class="panel-body"><p>The Etna school partners with a travel agency and offers low-cost trips to its students! But the director asks you to create an efficient API to call the front end so he asks you!<br>Good luck!</p>
+<p>Develop a RESTful API for a travel management platform using TypeScript, Express.js, PostgreSQL, and Sequelize. The platform will allow users to:</p>
+<ul>
+<li>User account management (registration, login, updates, and deletion). <strong>You have two roles User or Admin.</strong></li>
+<li>Profile creation and management.</li>
+<li>Viewing and managing trips.</li>
+<li>Adding trips to a shopping cart and managing its contents.<br>In this project, Zod will be used to validate API request payloads to ensure data correctness before processing.</li>
+</ul>
+</div><div class="panel-heading panel-project">Consignes</div><div class="panel-body"><div class="panel-heading undefined">Step 1: Setup the Project</div><div class="panel-body"><ul>
+<li>Node.js: <a target="_blank" href="https://nodejs.org/" title="undefined">https://nodejs.org/</a></li>
+<li>Express: <a target="_blank" href="https://expressjs.com/" title="undefined">https://expressjs.com/</a></li>
+<li>TypeScript: <a target="_blank" href="https://www.typescriptlang.org/docs/handbook/-" title="undefined">https://www.typescriptlang.org/docs/handbook/-</a> - typescript-in-5-minutes.html</li>
+<li>Sequelize: <a target="_blank" href="https://sequelize.org/" title="undefined">https://sequelize.org/</a></li>
+</ul>
+</div><div class="panel-heading undefined">Step 2: Define the Database Schema with ORM with Seequelize don't forget cardinality</div><div class="panel-heading undefined">Step 3: Create SQL script to insert on DB</div><div class="panel-heading undefined">Step 4: Add Zod for Request Validation</div><div class="panel-body"><ul>
+<li>Zod: <a target="_blank" href="https://zod.dev/" title="undefined">https://zod.dev/</a></li>
+</ul>
+</div><div class="panel-heading undefined">Step 5: Create Middleware for Validation</div><div class="panel-body"><ul>
+<li>You must use JWT token to login</li>
+</ul>
+</div><div class="panel-heading undefined">Step 6: Create API Endpoints</div><div class="panel-body"><p><strong>I want all to call the API for each table like this:</strong></p>
+<p>POST /api/users<br>Body:</p>
+<p><strong>Request :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "username": "john_doe",
+ "password": "password123",
+ "is admin": "false";
+ "email": "john.doe@gmail.com"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "user_id": 1,
+ "username": "john_doe",
+ "is admin": "false";
+ "email": "john.doe@gmail.com",
+ "create_date": "2024-01-01",
+ "update_date": "2024-01-01"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>Get User by ID</p>
+<p>GET /api/users/:id</p>
+<p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "user_id": 1,
+ "username": "john_doe",
+ "email": "john.doe@gmail.com",
+ "is admin": "false";
+ "create_date": "2024-01-01",
+ "update_date": "2024-01-01"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>PUT /api/users/:id</p>
+<p><strong>Request</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "username": "john_updated",
+ "is admin": "false";
+ "email": "john.updated@gmail.com"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "user_id": 1,
+ "username": "john_updated",
+ "is admin": "false";
+ "email": "john.updated@gmail.com",
+ "update_date": "2024-01-10"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>DELETE /api/users/:id</p>
+<p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">204 No Content</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div></div></body></html>
