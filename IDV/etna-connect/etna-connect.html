@@ -1,0 +1,111 @@
+<html><head><title>Etna-Connect</title><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/prism.css"><link rel="stylesheet" href="https://dl.etna-alternance.net/sujets/sujet.css"><script type="text/javascript" src="https://dl.etna-alternance.net/sujets/prism.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script><script type="text/javascript" src="https://kit.fontawesome.com/2128552f47.js"></script><meta charset="UTF-8"></head><body><div class="panel-heading panel-header">Etna-Connect</div><div class="panel-heading panel-module">Modalities</div><div class="panel-body"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dépôt</td>
+<td>$$RENDU$$</td>
+</tr>
+<tr>
+<td>Correction</td>
+<td>Exam</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>1 Week</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>Only</td>
+</tr>
+</tbody></table>
+<p>Develop a RESTful API for a travel management platform using TypeScript, Express.js, PSQL, and Sequelize. The platform will allow users to:</p>
+</div><div class="panel-heading panel-project">Instructions</div><div class="panel-body"><div class="panel-heading undefined">Step 1: Setup the Project</div><div class="panel-body"><ul>
+<li>Node.js: <a target="_blank" href="https://nodejs.org/" title="undefined">https://nodejs.org/</a></li>
+<li>Express: <a target="_blank" href="https://expressjs.com/" title="undefined">https://expressjs.com/</a></li>
+<li>TypeScript: <a target="_blank" href="https://www.typescriptlang.org/docs/handbook/-" title="undefined">https://www.typescriptlang.org/docs/handbook/-</a> - typescript-in-5-minutes.html</li>
+<li>Sequelize: <a target="_blank" href="https://sequelize.org/" title="undefined">https://sequelize.org/</a></li>
+</ul>
+</div><div class="panel-heading undefined">Step 2: Define the Database Schema with ORM with Seequelize</div><div class="panel-heading panel-forbidden">Don't forget cardinality</div><div class="panel-heading undefined">Step 3: Create SQL script to insert data on DB</div><div class="panel-heading undefined">Step 4: Add Zod for Request Validation</div><div class="panel-body"><ul>
+<li>Zod: <a target="_blank" href="https://zod.dev/" title="undefined">https://zod.dev/</a></li>
+</ul>
+<p>Zod is a TypeScript-first schema declaration and validation library. I'm using the term "schema" to broadly refer to any data type, from a simple string to a complex nested object. Zod is designed to be as developer-friendly as possible. The goal is to eliminate duplicative type declarations.</p>
+</div><div class="panel-heading undefined">Step 5: Create API Endpoints</div><div class="panel-body"><p><strong>Create a Post for exemple</strong></p>
+<p>POST /api/posts</p>
+<p><strong>Request Body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "user_id": 1,
+ "content": "Excited to share this amazing update with everyone!",
+ "image_url": "https://example.com/image.jpg"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "post_id": 101,
+ "user_id": 1,
+ "content": "Excited to share this amazing update with everyone!",
+ "image_url": "https://example.com/image.jpg",
+ "created_at": "2024-11-21",
+ "updated_at": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>GET /api/posts</p>
+<p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">[
+ {
+   "post_id": 101,
+   "user_id": 1,
+   "content": "Excited to share this amazing update with everyone!",
+   "image_url": "https://example.com/image.jpg",
+   "created_at": "2024-11-21",
+   "updated_at": "2024-11-21"
+ },
+ {
+   "post_id": 102,
+   "user_id": 2,
+   "content": "Had a fantastic time at the beach today!",
+   "image_url": "https://example.com/beach.jpg",
+   "created_at": "2024-11-20",
+   "updated_at": "2024-11-20"
+ }
+]</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>GET /api/posts/:id</p>
+<p><strong>Response :</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "post_id": 101,
+ "user_id": 1,
+ "content": "Excited to share this amazing update with everyone!",
+ "image_url": "https://example.com/image.jpg",
+ "created_at": "2024-11-21",
+ "updated_at": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>PUT /api/posts/:id</p>
+<p><strong>Request Body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "content": "Updated content for my post!",
+ "image_url": "https://example.com/updated-image.jpg"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "post_id": 101,
+ "user_id": 1,
+ "content": "Updated content for my post!",
+ "image_url": "https://example.com/updated-image.jpg",
+ "created_at": "2024-11-21",
+ "updated_at": "2024-11-22"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>DELETE /api/posts/:id</p>
+<p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">204 No Content</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div></div><div class="panel-heading undefined">Step 6:Create JWT &amp; add Middleware for Validation</div><div class="panel-heading undefined">Step 7: The Admin mode</div><div class="panel-body"><p>Now the admin wants to delete any information on the website, for example, imagine you want delete any informations ? so you must use middleware !</p>
+<p>example :</p>
+<p>POST /api/posts/ad (Admin Only)</p>
+<p>Authorization Header: When accessing protected routes, the client must include the token _in the header:</p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">Authorization: Bearer <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>token</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Request body:</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "content": "We are excited to announce a new feature launching next week!",
+ "image_url": "https://example.com/announcement.jpg"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p><strong>Response</strong></p>
+<div class="code-toolbar"><pre class=" language-markup"><code class=" language-markup">{
+ "post_id": 101,
+ "admin_id": 1,
+ "content": "We are excited to announce a new feature launching next week!",
+ "image_url": "https://example.com/announcement.jpg",
+ "created_at": "2024-11-21",
+ "updated_at": "2024-11-21"
+}</code></pre><div class="toolbar"><div class="toolbar-item"><button>Copy</button></div></div></div><p>Let's go!</p>
+</div></div></body></html>

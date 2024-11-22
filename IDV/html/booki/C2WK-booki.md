@@ -5,7 +5,7 @@
 | Type | Description |
 | - | - |
 | Dépôt | $$Rendu$$ |
-| exam | Exam |
+| Exam | Exam |
 | Duration | 2 Days |
 | Participants | Individual |
 
